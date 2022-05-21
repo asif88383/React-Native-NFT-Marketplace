@@ -1,11 +1,13 @@
-import { StyleSheet, Text, View } from 'react-native'
-import React from 'react'
+import { StyleSheet, SafeAreaView, FlatList, Text, View } from 'react-native'
+import React, {useState} from 'react'
+
+import {COLORS, NFTData} from '../constants';
 
 const Home = () => {
   return (
-    <View>
-      <Text>Home</Text>
-    </View>
+    <SafeAreaView style={{flex: 1}}>
+        <Text>Hello</Text>
+    </SafeAreaView>
   )
 }
 
