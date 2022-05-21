@@ -1,4 +1,4 @@
-import { View, Text } from "react-native";
+import { View, Text, Image } from "react-native";
 import React from "react";
 import { assets, COLORS, FONTS, SHADOWS, SIZES } from "../constants";
 
@@ -10,19 +10,34 @@ export const NFTTitle = () => {
   );
 };
 
-export const EthPrice = () => {
+export const EthPrice = ({price}) => {
   return (
-    <View>
-      <Text>SubInfo</Text>
+    <View style={{flexDirection: "row", alignContent: "center"}}>
+        <Image 
+            source={assets.eth}
+            resizeMode= "contain"
+            style={{width: 20, height: 20, marginRight: 2}}
+        />
+      <Text style={{
+          fontFamily: FONTS.medium,
+          fontSize: SIZES.font,
+          color: COLORS.primary,
+      }}>{price}</Text>
     </View>
   );
 };
 
-export const ImageCmp = () => {
+export const ImageCmp = ({imgUrl, index}) => {
   return (
-    <View>
-      <Text>SubInfo</Text>
-    </View>
+    <Image 
+    source={imgUrl}
+    resizeMode="contain"
+    style={{
+        width: 48,
+        height: 48,
+        marginLeft: index == 0 ? 0 : -SIZES.font,
+    }}
+    />
   );
 };
 
