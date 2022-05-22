@@ -1,5 +1,4 @@
 import { View, Image, Text } from 'react-native'
-import { NavigationHelpersContext, useNavigation } from '@react-navigation/native'
 
 import { SIZES, SHADOWS, assets, COLORS } from '../constants'
 import { CircleButton, RectButton } from './Button'
