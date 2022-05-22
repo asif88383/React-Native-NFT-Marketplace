@@ -43,7 +43,9 @@ export const RectButton = ({minWidth, fontSize, handlePress, ...props}) => {
         fontSize: fontSize,
         color: COLORS.white,
         textAlign: 'center'
-      }}>
+      }}
+      onPress={handlePress}
+      >
         Place a Bid
       </Text>
     </TouchableOpacity>
