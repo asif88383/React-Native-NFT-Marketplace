@@ -1,8 +1,8 @@
-import { FlatList, SafeAreaView, StatusBar, StyleSheet, Text, View } from "react-native";
+import { FlatList, SafeAreaView, StatusBar, Image, Text, View } from "react-native";
 import React from "react";
 
 import { SIZES, SHADOWS, FONTS, assets, COLORS } from "../constants";
-import { CircleButton, DetailsBid, FocusedStatusBar, RectButton } from "../components";
+import { CircleButton, DetailsBid, DetailsDesc, FocusedStatusBar, RectButton, SubInfo } from "../components";
 
 const DetailsHeader = ({ data, navigation }) => (
   <View style={{ width: "100%", height: 373 }}>
@@ -21,7 +21,7 @@ const DetailsHeader = ({ data, navigation }) => (
 
     <CircleButton
       imgUrl={assets.heart}
-      rigt={15}
+      right={15}
       top={StatusBar.currentHeight + 10}
     />
   </View>
@@ -62,6 +62,20 @@ const Detail = ({ route, navigation }) => {
         ListHeaderComponent={()=>(
           <React.Fragment>
             <DetailsHeader data={data} navigation={navigation} />
+            <SubInfo/>
+            <View style={{padding: SIZES.font}}>
+              <DetailsDesc data={data} />
+              
+              {data.bids.length > 0 && (
+                <Text style={{
+                  fontFamily: FONTS.semiBold,
+                  fontSize: SIZES.font,
+                  color: COLORS.primary,
+                }}>
+                  Current Bid: {data.bids[0].price}
+                </Text>
+              )}
+            </View>
           </React.Fragment>
         )}
       />
