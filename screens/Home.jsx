@@ -1,5 +1,7 @@
 import { StyleSheet, SafeAreaView, FlatList, View } from "react-native";
 import React, { useState } from "react";
+import { WebView } from "react-native-webview";
+
 
 import { COLORS, NFTData } from "../constants";
 import { NFTCard, HomeHeader, FocusedStatusBar } from "../components";
@@ -27,9 +29,13 @@ const Home = () => {
     <SafeAreaView style={{ flex: 1 }}>
       <FocusedStatusBar background={COLORS.primary} />
 
+      {/* <WebView
+        source={{ uri: "https://reactnative.dev/" }}
+        style={{ marginTop: 20, marginBottom: 20 }}
+      /> */}
       <View style={{ flex: 1 }}>
         <View style={{ zIndex: 0 }}>
-        <FlatList
+          <FlatList
             data={nftData}
             renderItem={({ item }) => <NFTCard data={item} />}
             keyExtractor={(item) => item.id}
@@ -37,7 +43,6 @@ const Home = () => {
             ListHeaderComponent={<HomeHeader onSearch={handleSearch} />}
           />
         </View>
-
         <View
           style={{
             position: "absolute",
@@ -48,8 +53,8 @@ const Home = () => {
             zIndex: -1,
           }}
         >
-            <View style={{height: 300, backgroundColor: COLORS.primary}} />
-            <View style={{flex: 1, backgroundColor: COLORS.white}}/>
+          <View style={{ height: 300, backgroundColor: COLORS.primary }} />
+          <View style={{ flex: 1, backgroundColor: COLORS.white }} />
         </View>
       </View>
     </SafeAreaView>
