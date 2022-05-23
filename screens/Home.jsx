@@ -29,7 +29,7 @@ const Home = () => {
     <SafeAreaView style={{ flex: 1 }}>
       <FocusedStatusBar background={COLORS.primary} />
 
-      {/* <WebView
+      {/* <WebView    // test webview
         source={{ uri: "https://reactnative.dev/" }}
         style={{ marginTop: 20, marginBottom: 20 }}
       /> */}
