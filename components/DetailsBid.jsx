@@ -1,7 +1,7 @@
 import { View, Text, Image} from 'react-native'
 import React from 'react'
 
-import { SIZES, SHADOWS, FONTS, assets, COLORS } from "../constants";
+import { SIZES, FONTS, COLORS } from "../constants";
 import { EthPrice } from './SubInfo';
 
 
