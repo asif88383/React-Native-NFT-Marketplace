@@ -2,7 +2,7 @@ import { View, Text } from 'react-native'
 import React, {useState} from 'react'
 import { EthPrice, NFTTitle } from './SubInfo'
 
-import { SIZES, SHADOWS, FONTS, assets, COLORS } from "../constants";
+import { SIZES, FONTS, COLORS } from "../constants";
 
 
 const DetailsDesc = ({data}) => {
